@@ -1,0 +1,13 @@
+// C4D-StringResource
+// Identifier	Text
+
+STRINGTABLE
+{
+ 
+
+	IDS_MYMTS			"testowy test testowego pluginu mts";
+	IDS_TESTUI				 "test UI";
+	
+
+
+}
