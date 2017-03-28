@@ -16,9 +16,11 @@ public:
 
 Bool MyMts::Execute(BaseDocument* doc)
 {													  
+
 	const Filename kappa="C:/Users/marwik15/Documents";
 
-	// Export the temporary document as Collada file
+//	GeExecuteFile(Filename("‪C:/Users/marwik15/Desktop/Mitsuba 0.5.0/mtsgui.exe"));
+	// Export the temporary document as Collada file								 '
 	// Collada im - / exporter IDs :
 	//ID_COLLADA14_IMPORT 1022315
 		// ID_COLLADA14_EXPORT 1022316
@@ -34,14 +36,26 @@ Bool MyMts::Execute(BaseDocument* doc)
 
 //	if (!SaveDocument(doc, GeGetStartupPath() + Filename("tesdddt.cae"), SAVEDOCUMENTFLAGS_DIALOGSALLOWED | SAVEDOCUMENTFLAGS_SAVEAS | SAVEDOCUMENTFLAGS_EXPORTDIALOG, COLLADA_EXPORT_TRIANGLES))  MessageDialog("expor error");
 
-	if (!SaveDocument(doc, GeGetStartupPath() + Filename("tesdddt.dae"), SAVEDOCUMENTFLAGS_DIALOGSALLOWED |
+	Filename saveDIR = GeGetStartupPath() + "mtsTest/temp/";
+
+	
+	GeFCreateDirRec(GeGetPluginPath() + Filename("tempScenes"));
+
+	if (!SaveDocument(doc, GeGetPluginPath() + Filename("tempScenes/mtstemp.dae"), SAVEDOCUMENTFLAGS_DIALOGSALLOWED |
 		SAVEDOCUMENTFLAGS_SAVEAS | SAVEDOCUMENTFLAGS_EXPORTDIALOG, 1022316)){
 		MessageDialog("export error");
 	}
 	else {
 		//MessageDialog("export fine");
-	//	if (!GeExecuteFile(Filename("‪C:/Users/marwik15/Desktop/1v1_gru_8.mp3"))) MessageDialog("program launch failed");
-		if (!GeExecuteProgram(Filename("‪C:/Users/marwik15/Desktop/"),Filename("1v1_gru_8.mp3"))) MessageDialog("program launch failed");
+		//if (!GeExecuteFile(Filename("G:/Program Files/Rockstar Games/Grand Theft Auto V/PlayGTAV.exe"))) MessageDialog("program launch failed");
+	//	if (!GeExecuteFile(Filename("C:/Program Files(x86)/MozillaFirefox/firefox.exe"))) MessageDialog("program launch failed");
+	//	if (!GeExecuteProgram(Filename("‪C:/Users\marwik15\Desktop\Mitsuba 0.5.0\mtsgui.exe"), Filename("‪C:/Users/marwik15/Desktop/mts stuff/sssdragon/sssdragon.xml"))) MessageDialog("program launch failed");
+		//GeExecuteFile("‪C:/Users\marwik15\Desktop\Mitsuba 0.5.0\mtsgui.exe");
+
+		const String argMTS = "-v";
+
+		//if (!GeExecuteProgram("C:/Users/marwik15/Desktop/Mitsuba 0.5.0/mtsimport.exe", "-v X:\HH\Fox_LP.obj" "C:\Users\marwik15\Desktop\mts stuff\room mitsuba test\mts_import_console.xml "))  MessageDialog("program launch failed");
+		if (!GeExecuteProgram("C:/Users/marwik15/Desktop/Mitsuba 0.5.0/mitsuba.exe", "C:\Users\marwik15\Desktop\mts stuff\cbox\cbox.xml"))  MessageDialog("program launch failed");
 	}
 	
 
@@ -51,7 +65,7 @@ Bool MyMts::Execute(BaseDocument* doc)
 
 	//MessageDialog("here still works");
 	GePrint("   ");
-	GePrint("testowy test testowego pluginu wygada na zaladowany poprawnie ;D");
+	GePrint("testowy test testowego pluginu wygląda na zaladowany poprawnie ;DxP" );
 	GePrint("   ");
 
 
