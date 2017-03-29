@@ -39,6 +39,9 @@ Bool PluginStart(void)
 
 	if (!RegisterMyMts())
 		return false;
+
+	if (!RegisterMyMtsTEST())
+		return false;
 	
 
 	return true;

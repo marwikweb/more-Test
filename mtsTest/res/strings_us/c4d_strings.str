@@ -7,6 +7,7 @@ STRINGTABLE
 
 	IDS_MYMTS			"testowy test testowego pluginu mts";
 	IDS_TESTUI				 "test UI";
+	IDS_MYMTSTEST    "RUN EXE only";
 	
 
 

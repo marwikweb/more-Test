@@ -6,6 +6,8 @@ enum
 	// Other
 	
 	IDS_MYMTS,
+	IDS_MYMTSTEST,
+
 
 
 // End of symbol definition

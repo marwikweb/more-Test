@@ -55,7 +55,7 @@ Bool MyMts::Execute(BaseDocument* doc)
 		const String argMTS = "-v";
 
 		//if (!GeExecuteProgram("C:/Users/marwik15/Desktop/Mitsuba 0.5.0/mtsimport.exe", "-v X:\HH\Fox_LP.obj" "C:\Users\marwik15\Desktop\mts stuff\room mitsuba test\mts_import_console.xml "))  MessageDialog("program launch failed");
-		if (!GeExecuteProgram("C:/Users/marwik15/Desktop/Mitsuba 0.5.0/mitsuba.exe", "C:\Users\marwik15\Desktop\mts stuff\cbox\cbox.xml"))  MessageDialog("program launch failed");
+		if (!GeExecuteProgram("C:/Users/marwik15/Desktop/Mitsuba 0.5.0/mitsuba.exe \"C:/Users\marwik15\Desktop\mts stuff\cbox\cbox.xml\"", " \"C:/Users\marwik15\Desktop\mts stuff\cbox\cbox.xml \""))  MessageDialog("program launch failed");
 	}
 	
 

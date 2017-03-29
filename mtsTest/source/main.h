@@ -5,6 +5,7 @@
 
 
 Bool RegisterMyMts();
+Bool RegisterMyMtsTEST();
 
 
 #endif // MAIN_H__
